@@ -164,7 +164,7 @@ static int8_t CDC_Init_FS(void)
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, UserRxBufferFS);
 
   // https://stackoverflow.com/a/26925578
-  uint32_t baudrate = 9600;
+  uint32_t baudrate = 115200;
   lcBuffer[0] = (uint8_t)(baudrate);
   lcBuffer[1] = (uint8_t)(baudrate >> 8);
   lcBuffer[2] = (uint8_t)(baudrate >> 16);
@@ -392,5 +392,3 @@ void CDC_FlushRxBuffer_FS() {
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
